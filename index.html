@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/input.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | NFT preview card component</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="bg-main-bg min-h-screen flex items-center justify-center p-6">
+  <!-- Main card container -->
+  <main class="bg-card-bg rounded-xl shadow-2xl p-6 max-w-[350px] w-full">
+    <!-- Image container with hover effect ONLY on the image -->
+    <div class="relative rounded-xl overflow-hidden mb-6">
+      <div class="group">
+        <img 
+          src="/images/image-equilibrium.jpg" 
+          alt="Equilibrium" 
+          class="w-full h-auto rounded-xl cursor-pointer"
+        >
+        <!-- Hover overlay (only shows when image is hovered) -->
+        <div class="absolute inset-0 bg-cyan-400 bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <img src="/images/icon-view.svg" alt="View icon">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Content (outside the hover group) -->
+    <div class="space-y-4">
+      <h1 class="text-white text-xl font-semibold hover:text-cyan-400 transition-colors cursor-pointer">Equilibrium #3429</h1>
+      <p class="text-soft-blue text-lg">Our Equilibrium collection promotes balance and calm.</p>
+      
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-2 text-cyan-400 font-semibold">
+          <img src="/images/icon-ethereum.svg" alt="Ethereum icon">
+          <span>0.041 ETH</span>
+        </div>
+        <div class="flex items-center space-x-2 text-soft-blue">
+          <img src="/images/icon-clock.svg" alt="Clock icon">
+          <span>3 days left</span>
+        </div>
+      </div>
+      
+      <hr class="border-line">
+      
+      <div class="flex items-center space-x-4">
+        <img src="/images/image-avatar.png" alt="Creator avatar" class="w-8 h-8 border border-white rounded-full">
+        <p class="text-soft-blue">Creation of <span class="text-white hover:text-cyan-400 transition-colors cursor-pointer">Jules Wyvern</span></p>
+      </div>
+    </div>
+  </main>
+
+  <div class="attribution absolute bottom-4 left-0 right-0">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Queen Lisa Omondi</a>.
+  </div>
+</body>
+</html>
